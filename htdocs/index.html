@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Gestor de Clientes</title>
+    <link rel="icon" href="Assets/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Assets/styles.css">
+</head>
+<body>
+    <h1>Gestor de Clientes</h1>
+
+    <form id="clientForm" onsubmit="event.preventDefault(); return false;">
+        <input type="hidden" id="clientId" name="id">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+        
+        <button type="submit" id="btnSubmit">Guardar Cliente</button>
+        <button type="button" id="btnCancel" style="display:none;" onclick="resetForm()">Cancelar</button>
+    </form>
+
+    <table id="clientesTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+	<script src="Public/js/main.js?v=2.0"></script>
+</body>
+</html>

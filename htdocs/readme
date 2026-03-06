@@ -1,0 +1,59 @@
+👥 Sistema de Gestión de Clientes (CRUD)
+Este es un sistema robusto de Gestión de Clientes desarrollado bajo la arquitectura MVC (Modelo-Vista-Controlador). Permite administrar una base de datos de contactos de forma eficiente, ofreciendo una interfaz limpia y una lógica de backend optimizada para el rendimiento.
+
+🚀 Características Principales
+Operaciones CRUD Completas: Capacidad para crear, leer, actualizar y eliminar registros de clientes de manera intuitiva.
+
+Interfaz Asíncrona: Implementación de JavaScript Fetch API para realizar peticiones al servidor sin necesidad de recargar la página.
+
+Arquitectura Profesional: Separación de responsabilidades mediante el uso de Modelos (PHP) para la lógica de datos y Controladores para la gestión de peticiones.
+
+Sistema de Auditoría (Logs): Base de datos equipada con Triggers que registran automáticamente cada acción (Inserción, Actualización, Eliminación) en una tabla de historial.
+
+Seguridad y Validación: Uso de sentencias preparadas con PDO para prevenir ataques de inyección SQL.
+
+🛠️ Stack Tecnológico
+Frontend: HTML5, CSS3, JavaScript (ES6+).
+
+Backend: PHP 8.x.
+
+Base de Datos: MySQL / MariaDB con soporte para disparadores automáticos.
+
+Despliegue: Optimizado para entornos de hosting web (actualmente desplegado en servidor real).
+
+📂 Estructura del Directorio
+Plaintext
+/
+├── Assets/             # Recursos estéticos y estilos (CSS)
+├── Config/             # Configuración de conexión PDO a la base de datos
+├── Database/           # Scripts SQL y esquemas de la base de datos
+├── Models/             # Clases de PHP (Lógica de acceso a datos)
+├── Services/           # Controladores que gestionan las acciones de la API
+├── js/                 # Lógica de cliente y manipulación del DOM
+└── index.html          # Interfaz de usuario principal
+🔧 Instalación y Requisitos
+Clonar el repositorio y alojarlo en un servidor local (XAMPP/WAMP) o remoto.
+
+Configurar la Base de Datos:
+
+Ejecutar el archivo .sql en su gestor de bases de datos.
+
+Actualizar las credenciales en Config/DatabaseCN.php.
+
+Configurar el entorno:
+
+Asegurarse de tener habilitada la extensión pdo_mysql en su configuración de PHP.
+
+📊 Registro de Actividad (Auditoría)
+El sistema incluye una tabla log_clientes que garantiza la trazabilidad de la información:
+
+Registro de Inserción: Almacena el ID del nuevo cliente y su nombre.
+
+Historial de Cambios: Guarda el estado previo y el nuevo de cada campo al realizar una actualización.
+
+Control de Eliminación: Documenta quién y cuándo eliminó un registro del sistema.
+
+👤 Autor
+Desarrollador: Steban (steban-dev)
+
+Proyecto: Portafolio de Desarrollo Web Full Stack.

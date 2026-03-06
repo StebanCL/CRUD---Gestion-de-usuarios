@@ -1,0 +1,160 @@
+/* Variables para cambiar colores fácilmente */
+:root {
+    --primary-gold: #c5a059;
+    --dark-bg: #1a1a1a;
+    --light-text: #f4f4f4;
+    --border-color: #333;
+    --danger: #e74c3c;
+    --success: #2ecc71;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--dark-bg);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid var(--primary-gold);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* --- ESTILO DEL FORMULARIO --- */
+form {
+    background: var(--dark-bg);
+    color: var(--light-text);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #2a2a2a;
+    color: white;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+}
+
+#btnSubmit {
+    grid-column: span 1;
+    background-color: var(--primary-gold);
+    color: var(--dark-bg);
+}
+
+button {
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+#btnSubmit:hover {
+    background-color: #b38f4d;
+    transform: translateY(-2px);
+}
+
+#btnCancel {
+    background-color: #444;
+    color: white;
+}
+
+/* --- ESTILO DE LA TABLA --- */
+table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: var(--dark-bg);
+    color: var(--primary-gold);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- DISEÑO RESPONSIVO (MÓVIL) --- */
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Formulario en una sola columna */
+    }
+
+    #btnSubmit {
+        grid-column: span 1;
+    }
+
+    /* Transformación de Tabla a Tarjetas */
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        display: none; /* Escondemos los títulos de arriba */
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border: 2px solid var(--primary-gold); /* Borde dorado para separar clientes */
+        border-radius: 8px;
+        background: white;
+    }
+
+    td {
+        text-align: right;
+        padding: 12px 15px;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* El truco del data-label para mostrar qué campo es */
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        color: var(--dark-bg);
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+
+    td:last-child {
+        border-bottom: none;
+        text-align: center; /* Centrar botones de acciones */
+    }
+}

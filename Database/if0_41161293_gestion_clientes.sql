@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: sql113.infinityfree.com
--- Tiempo de generación: 15-02-2026 a las 17:14:38
+-- Tiempo de generación: 06-03-2026 a las 07:14:50
 -- Versión del servidor: 11.4.10-MariaDB
 -- Versión de PHP: 7.2.22
 
@@ -36,6 +36,13 @@ CREATE TABLE `clientes` (
   `FECHA_REGISTRO` timestamp NOT NULL DEFAULT current_timestamp(),
   `ESTADO` enum('ACTIVO','INACTIVO') DEFAULT 'ACTIVO'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`ID`, `NOMBRE`, `TELEFONO`, `CORREO`, `FECHA_REGISTRO`, `ESTADO`) VALUES
+(12, 'yefersonuwu', '31415157485', 'skadjkajdad@gmail.com', '2026-03-02 16:32:19', 'ACTIVO');
 
 -- --------------------------------------------------------
 
@@ -76,7 +83,7 @@ ALTER TABLE `log_clientes`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `log_clientes`
