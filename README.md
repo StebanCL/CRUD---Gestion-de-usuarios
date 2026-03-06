@@ -1,2 +1,2 @@
-# CRUD---Gestion-de-usuarios
-CRUD desarrollado con PHP, JavaScript, HTML, CSS y MySQL, aplicando principios básicos de programación orientada a objetos y conexión a base de datos. Proyecto realizado bajo enfoque vibecoding, comprendiendo y ajustando la lógica del código durante el proceso de aprendizaje.
+CRUD-User-Management
+CRUD system developed using PHP, JavaScript, HTML, CSS, and MySQL, applying fundamental Object-Oriented Programming (OOP) principles and database connectivity. This project was built using a vibecoding approach—focusing on understanding and refining the code logic through an iterative, AI-collaborative learning process.
